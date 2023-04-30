@@ -1,0 +1,45 @@
+git scm to install
+
+git - to check git installation
+
+it is the git bash
+
+#############################################
+git configuration ... is used to set git configuration values on global and local project level
+
+configuration levels 
+--local : applied to the repository in which git bash is open
+--global : applied to the operating system
+
+if no option then local will be applied by default
+
+git config --global user.name "prakash"
+
+git config --global user.email "chandraprakashyadav1110@gmail.com"
+
+git config --list
+
+git config user.name
+->prakash
+
+git config user.email
+->chandraprakashyadav1110@gmail.com
+
+#####################################
+
+Git 3 stage architecture
+
+Git is a distributed version control system that uses a three-stage architecture
+ to manage and track changes to files over time
+
+working directory : 
+Directory where we have fileson our local machine 
+Here we make changes to files
+
+staging area : 
+once changes made , we add those changes to staging area , 
+The staging area is like a holding area for changes that you want to commit.
+
+Repository : 
+The repository is where Git stores all the committed changes{permanently}
+we can revert to any previous version of your files if necessary.
