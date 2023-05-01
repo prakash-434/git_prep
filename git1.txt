@@ -1,0 +1,30 @@
+
+ Unmodified       Modified        staging area      commit
+
+[working dir]   [working dir]     [git repo]        [git repo]    
+
+	file is changed 
+--------------------------->
+
+----------------------git restore------------------
+
+git restore file.txt ( to discard change)  ( Modified to unmodified)
+
+git restore --staged file.txt (to unstage)  (staging area to modified)
+
+
+#########################################333
+
+git reset HEAD file 
+git reset HEAD .    (unstage all files )
+
+git reset HEAD is a Git command used to unstage changes that
+have been added to the staging area (also known as the index)
+but have not yet been committed.
+
+A reset will revert the current staging index and the working directory back
+to the HEAD commit
+
+git checkout .
+
+same effect and restore the latest version of file from HEAD

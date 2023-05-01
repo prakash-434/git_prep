@@ -24,6 +24,16 @@ git config user.name
 
 git config user.email
 ->chandraprakashyadav1110@gmail.com
+##################################
+
+working directory               staging area             git repository
+			
+			checkout the project
+<----------------------------------------------------------------------
+
+	stage the file
+--------------------------------->       commit
+				-------------------------------------->
 
 #####################################
 
@@ -90,6 +100,8 @@ shift + insert to paste on git bash
 git log then q to quit
 
 F5 tab to auto complete
+
+pattern to match multiple files
 
 ######################
 git clone https://fhbvkh.com/tensforflow/tensorflow.git
@@ -176,7 +188,93 @@ git commit -a -m "Direct commit"  ( only for files that are tracked )
 
 for untracked files we have to stage it first
 
+#####################################################
+--------------moving and renaming files in git--------------------
+
+git rm is just opposite of git add
+
+the files/directories on which i have to use git rm must be commited
+ else use --cached or -f
+
+git rm file
+: git rm will remove the file from both the working directory and the staging area
+: git status : changes to be commited (deleted c.txt) ...means staging is done
+
+:it removes  and does the staging
+:but it won't remove the file from the repository history
+ until you commit the changes using git commit.
+
+git rm --cached file
+:will remove file from staging area and repository
+git status : untracked file D.txt
+:to make file go untracked
+:keeps the local file
 
 
+git rm -f file
+->git rm -f is a Git command used to force the removal of 
+a file from a Git repository, even if the file has been
+ modified since the last commit.
+->delete the file from your local working 
+directory and from the Git repository
 
+git mv file.txt newfilename.txt
+:commit karna hai
 
+If i rename A.txt to AA.txt in working directory
+
+git status
+changes not staged for commit
+deleted A.txt
+
+untracked files
+AA.txt
+
+To delete directly delete it and stage it
+
+There is no option to delete it only from working directory
+
+-------------------------
+git mv is a Git command used to move or rename a file or directory within a Git repository
+
+for moving
+
+git mv file/directory directory
+
+#####################################################################
+git log is a Git command used to display the commit history of a Git repository
+
+Running this command will display the list of commits, along with the following information for each commit:
+
+Commit hash: A unique identifier for the commit.
+Author: The name and email address of the person who made the commit.
+Date: The date and time the commit was made.
+Commit message: A brief description of the changes made in the commit.
+ 
+git log     (last to first commit)
+
+git log -p  (what changes have been done in that commit)
+git log -2  (last 2 commit)
+git log --stat (short summary)
+
+git log --pretty = oneline
+git log --pretty = short
+
+git log --since = 2.days
+git log --since = 2.weeks
+git log --since = 2.months
+
+#######################
+git ignore
+
+suppose i add file in gitignore
+now i do change in file
+
+git status
+modified file
+
+bcoz initially it was tracked 
+
+for untracking
+
+git rm --cached file
