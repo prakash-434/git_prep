@@ -43,3 +43,140 @@ The staging area is like a holding area for changes that you want to commit.
 Repository : 
 The repository is where Git stores all the committed changes{permanently}
 we can revert to any previous version of your files if necessary.
+
+
+#################################################
+----------------basic steps----------------
+
+git status
+->not a git repository
+
+git init
+->initialized empty git repository
+->after this .git file is made which is hidden
+
+git add --a or git add .
+->to add all the files to the staging area
+
+git status
+-> changes to be committed
+-> changes not staged for commit
+
+git commit -m "initial commit"
+->commit name
+-> 1 file changed 1 insertion
+
+git log
+-> commit commit id (head - > master)
+->Author username email id   
+->Date
+->commit name
+
+*git commit will only commit the files in the staging area
+
+use word modified
+
+rm -rf .git 
+-> git repo will be deleted
+
+git status
+->no repo
+
+########################
+---------tricks------------
+
+shift + insert to paste on git bash
+
+git log then q to quit
+
+F5 tab to auto complete
+
+######################
+git clone https://fhbvkh.com/tensforflow/tensorflow.git
+
+not a repo
+
+cd tensorflow
+
+
+#################333333
+
+.git folder
+
+1)Hidden , git track this folder
+2)it contains all the information about version control
+3)is created when you initialize a new Git repository
+4) It contains all the necessary files and subdirectories that Git 
+uses to manage and track changes to your files.
+
+Some of the files and directories that are typically found in the .git directory are:
+
+HEAD: This file points to the current branch that you are on.
+
+config: This file contains the configuration settings for the Git repository.
+
+objects , refs , hooks
+
+#################################################3
+--------------File status Lifecycle ---------------
+
+Tracking is done on the files and folder which are in the staging area
+else it will be untracked { untracked files : file1 , file2 }
+
+ Untracked  ------>  unmodified  ------> modified  -------->   staged
+
+<not staged>       <-------------------staged------------------------>
+                   [              Tracking is done                   ]
+
+
+ add the file         edit the file           stage the file
+ ---------------->    ----------------->        ------------------->
+
+
+ remove the file                       commit
+ <----------------   <-----------------------------------------------
+
+
+
+ git add --a  ( untracked to unmodified and now tracking is done)
+
+###################################################
+----------------------git ignore---------------------
+
+to exclude certain files and directories from 
+being tracked by the version control system.
+
+ex of files  :   log files, and temporary files
+
+error.log (file)
+error (directory) both untracked
+
+git status 
+->untracked error.log , error/
+
+touch .gitignore
+
+inside .gitignore file
+
+ error.log
+ error/
+
+git status
+->untracked .gitignore
+
+git add --a
+
+git commit - m "msg"
+
+###########################################################
+
+skipping the staging area
+
+git commit -a -m "Direct commit"  ( only for files that are tracked )
+
+for untracked files we have to stage it first
+
+
+
+
+
